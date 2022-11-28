@@ -197,16 +197,14 @@ const app = createApp({
     },
 
     searchUserResults () {
-      if (!usersList.name === "")  {
-          return this.usersList.filter (user => {
-          return user.name.includes(this.search)
-        })
+      // la funzione di ricerca nen ne ha voluto sapere di fuonzionare..
+      
         
       } 
     }
 
     
-  },
+  
 
   beforeMount () {
     this.userName = this.usersList[0]
