@@ -169,19 +169,33 @@ const app = createApp({
 
   
 
-    methods : {
+  methods : {
 
     // qui viene preso un nuovo messaggio digitato
-    
+  
     newMessageEnter () {
-    // ne leggo il valore usando il this.newMessage
-    this.newMessage
-    this.userName.messages.push ({
-      date: '10/01/2020 15:50:00',
-      message: this.newMessage,
-      status: 'sent'
-    })
+      // ne leggo il valore usando il this.newMessage
+      // prendo il valore dell'utente dato da v-for="(user, i) in usersList" :key="i + user.name" @click="userName = user"
+      // pusho nell'array del contatto selezionato il nuovo array con il messaggio.
+      this.userName.messages.push ({
+        date: '10/01/2020 15:50:00',
+        message: this.newMessage,
+        status: 'sent'
+      })
+
+      setTimeout(this.timeOfResponse, 1000)
+
+    },
+
+    timeOfResponse() {
+      this.userName.messages.push ({
+        date: '10/01/2020 15:50:00',
+        message: 'ok',
+        status: 'received'
+      })        
     }
+
+    
   },
 
   beforeMount () {

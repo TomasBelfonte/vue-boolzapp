@@ -62,7 +62,7 @@
             <!-- Navbar -->
             <div class="nav bg-light py-2">
                 <div class="avatar">
-                    <img :src=" `img/avatar${userName}.jpg` " alt="">
+                    <img :src=" `img/avatar${userName.avatar}.jpg` " alt="">
                 </div>
                 <small class="text-secondary">utimo messaggio inviato</small>
                 <small class="text-secondary" >12:00</small>
@@ -79,7 +79,7 @@
             <div class="d-flex nav-message text-center align-items-center">
                 <span class="smile"><i class="fa-regular fa-face-smile"></i></span>
                 <input type="text" class="form-control form-control-lg my-2 rounded-0" placeholder="Scrivi un messaggio..."
-                v-model="newMessage" @keyup.enter="">
+                v-model="newMessage" @keyup.enter="newMessageEnter">
                 <span class="mic"><i class="fa-solid fa-microphone"></i></span>
             </div>
         </div>
