@@ -179,7 +179,7 @@ const app = createApp({
     this.userName.messages.push ({
       date: '10/01/2020 15:50:00',
       message: this.newMessage,
-      status: 'rsent'
+      status: 'sent'
     })
     }
   },
