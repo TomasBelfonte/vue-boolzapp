@@ -163,11 +163,12 @@ const app = createApp({
 
       userName: null,
       newMessage: "",
+      search: "",
 
     }
   },
 
-  
+  searchUser: [],
 
   methods : {
 
@@ -193,6 +194,15 @@ const app = createApp({
         message: 'ok',
         status: 'received'
       })        
+    },
+
+    searchUserResults () {
+      if (!usersList.name === "")  {
+          return this.usersList.filter (user => {
+          return user.name.includes(this.search)
+        })
+        
+      } 
     }
 
     
