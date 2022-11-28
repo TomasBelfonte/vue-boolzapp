@@ -162,6 +162,7 @@ const app = createApp({
       ],
 
       userName: null,
+      newMessage: "",
 
     }
   },
@@ -170,6 +171,17 @@ const app = createApp({
 
     methods : {
 
+    // qui viene preso un nuovo messaggio digitato
+    
+    newMessageEnter () {
+    // ne leggo il valore usando il this.newMessage
+    this.newMessage
+    this.userName.messages.push ({
+      date: '10/01/2020 15:50:00',
+      message: this.newMessage,
+      status: 'rsent'
+    })
+    }
   },
 
   beforeMount () {
