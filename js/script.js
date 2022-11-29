@@ -164,6 +164,7 @@ const app = createApp({
       userName: null,
       newMessage: "",
       search: "",
+      
 
     }
   },
@@ -193,6 +194,13 @@ const app = createApp({
         status: 'received'
       })        
     },
+
+    searchUsers() {
+      
+
+
+      
+    }
 
   },
 

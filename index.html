@@ -64,16 +64,15 @@
                 <div class="avatar">
                     <img :src=" `img/avatar${userName.avatar}.jpg` " alt="">
                 </div>
-                <div class="pt-2 px-2 flex-grow-1">
-                    <div>{{userName.name}}</div>
-                    <small class="text-secondary">utimo messaggio inviato</small>
-                    <small class="text-secondary px-2" >12:00</small>
-                </div class="">
-                    <i class="fa-solid fa-magnifying-glass text-secondary icons"></i>
-                    <i class="fa-solid fa-paperclip text-secondary icons"></i>
-                    <i class="fa-solid fa-ellipsis-vertical text-secondary icons"></i>
-                <div>
-
+                    <div class="pt-2 px-2 flex-grow-1">
+                        <div>{{userName.name}}</div>
+                        <small class="text-secondary">utimo messaggio inviato</small>
+                        <small class="text-secondary px-2" >12:00</small>
+                    </div class="">
+                        <i class="fa-solid fa-magnifying-glass text-secondary icons"></i>
+                        <i class="fa-solid fa-paperclip text-secondary icons"></i>
+                        <i class="fa-solid fa-ellipsis-vertical text-secondary icons"></i>
+                    <div>
                 </div>
                 
             </div>
@@ -87,10 +86,10 @@
 
             <!-- Navbar inserimento messaggi -->
             <div class="d-flex nav-message text-center align-items-center">
-                <span class="smile"><i class="fa-regular fa-face-smile"></i></span>
+                <span class="smile"><i class="fa-regular fa-face-smile text-secondary"></i></span>
                 <input type="text" class="form-control form-control-lg my-2 rounded-0" placeholder="Scrivi un messaggio..."
                 v-model="newMessage" @keyup.enter="newMessageEnter">
-                <span class="mic"><i class="fa-solid fa-microphone"></i></span>
+                <span class="mic"><i class="fa-solid fa-microphone text-secondary"></i></span>
             </div>
         </div>
 
