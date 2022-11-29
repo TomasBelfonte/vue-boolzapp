@@ -168,8 +168,6 @@ const app = createApp({
     }
   },
 
-  searchUser: [],
-
   methods : {
 
     // qui viene preso un nuovo messaggio digitato
@@ -196,15 +194,8 @@ const app = createApp({
       })        
     },
 
-    searchUserResults () {
-      // la funzione di ricerca nen ne ha voluto sapere di fuonzionare..
-      
-        
-      } 
-    }
+  },
 
-    
-  
 
   beforeMount () {
     this.userName = this.usersList[0]
