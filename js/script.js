@@ -195,16 +195,44 @@ const app = createApp({
       })        
     },
 
-    searchUsers() {
-      
-
-
-      
-    }
-
   },
+  computed : {
 
+    searchUsers() {
 
+      /*
+      const nuovoArray = [];
+
+      for(let i = 0; i < this.usersList.length; i++) {
+
+        const item = this.usersList[i];
+
+        // michele
+
+        // michele
+
+        if (item.name.toLowerCase().includes(this.search.toLowerCase())) {
+          nuovoArray.push(item);
+        }
+      }
+
+      return nuovoArray;
+      */
+
+      const nuovoArray = this.usersList.filter(item=>{
+
+        
+          if (item.name.toLowerCase().includes(this.search.toLowerCase())) {
+            return true;
+          } else {
+            return false;
+          }
+          
+      });
+
+      return nuovoArray;
+    }
+  },
   beforeMount () {
     this.userName = this.usersList[0]
   }

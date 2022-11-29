@@ -44,7 +44,7 @@
             <div class="list-group list-group-flush overflow-auto flex-grow-1">
 
                 <!-- dettaglio contatto ciclato con v-for-->
-                <div class="list-group-item d-flex gap-3"  v-for="(user, i) in usersList" :key="i + user.name" @click="userName = user" >
+                <div class="list-group-item d-flex gap-3"  v-for="(user, i) in searchUsers" :key="i + user.name" @click="userName = user" >
                     <div class="avatar">
                         <img :src=" `img/avatar${user.avatar}.jpg` " alt="">
                     </div>
